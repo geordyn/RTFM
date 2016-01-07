@@ -4,9 +4,13 @@ $scope.message = 'hello from THREAD controller';
 
  var currentThreadId = $stateParams.threadId;
 
+$scope.hideUserBox = !true;
 
 $scope.createNewComment = function(comment){
   threadService.addComment(comment, currentThreadId);
+  $scope.comment.text = null;
+  $scope.hideUserBox = true;
+
 };
 
 
