@@ -1,0 +1,23 @@
+<center>
+
+  <button ui-sref="threads">back</button>
+  <h1>THREAD HTML</h1>
+
+
+
+
+  <input ng-model="comment.user" placeholder="Username:"></input>
+  <input ng-model="comment.text" placeholder="text:"></input>
+  <button ng-click="createNewComment(comment)">send</button>
+</center>
+<br/>
+
+<div ng-repeat="comment in comments">
+  <strong>{{comment.user}}:</strong>
+  <br/>
+  <h3>{{comment.text}}</h3>
+  <br/>
+  <br/>
+</div>
+
+</center>
